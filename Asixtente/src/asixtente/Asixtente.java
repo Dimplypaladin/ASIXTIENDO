@@ -5,6 +5,7 @@
  */
 package asixtente;
 
+import Forms.LoginJfrm;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javafx.application.Platform;
@@ -41,19 +42,8 @@ public class Asixtente extends JApplet {
                     UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
                 } catch (Exception e) {
                 }
-                
-                JFrame frame = new JFrame("JavaFX 2 in Swing");
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                
                 JApplet applet = new Asixtente();
                 applet.init();
-                
-                frame.setContentPane(applet.getContentPane());
-                
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setVisible(true);
-                
                 applet.start();
             }
         });
@@ -75,18 +65,20 @@ public class Asixtente extends JApplet {
     }
     
     private void createScene() {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        fxContainer.setScene(new Scene(root));
+        LoginJfrm login = new LoginJfrm();
+        login.setVisible(true);
+//        Button btn = new Button();
+//        btn.setText("Say 'Hello World'");
+//        btn.setOnAction(new EventHandler<ActionEvent>() {
+//            
+//            @Override
+//            public void handle(ActionEvent event) {
+//                System.out.println("Hello World!");
+//            }
+//        });
+//        StackPane root = new StackPane();
+//        root.getChildren().add(btn);
+//        fxContainer.setScene(new Scene(root));
     }
     
 }
