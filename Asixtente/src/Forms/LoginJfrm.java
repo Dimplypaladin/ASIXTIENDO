@@ -5,6 +5,8 @@
  */
 package Forms;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Danny Logax
@@ -33,7 +35,7 @@ public class LoginJfrm extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jbtnAccess = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,7 +54,12 @@ public class LoginJfrm extends javax.swing.JFrame {
 
         jLabel4.setText("Contraseña:");
 
-        jButton1.setText("Entrar");
+        jbtnAccess.setText("Entrar");
+        jbtnAccess.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnAccessActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar");
 
@@ -70,7 +77,7 @@ public class LoginJfrm extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton1)
+                                    .addComponent(jbtnAccess)
                                     .addGap(18, 18, 18)
                                     .addComponent(jButton2)
                                     .addGap(10, 10, 10))
@@ -104,14 +111,18 @@ public class LoginJfrm extends javax.swing.JFrame {
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbtnAccess)
                     .addComponent(jButton2))
                 .addGap(15, 15, 15))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbtnAccessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAccessActionPerformed
+        JOptionPane.showMessageDialog(this,"Cagala!!");
+    }//GEN-LAST:event_jbtnAccessActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,7 +161,6 @@ public class LoginJfrm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -158,5 +168,6 @@ public class LoginJfrm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton jbtnAccess;
     // End of variables declaration//GEN-END:variables
 }
